@@ -1,16 +1,16 @@
 pipeline {
         agent any
 
-        Stages {
-            Stage('checkout') {
-                 Steps {
+        stages {
+            stage('checkout') {
+                 steps {
                          checkout scm
                        }}
-                Stage('Build') {
-                  Steps {
+                stage('Build') {
+                  steps {
                          sh '/home/amrita/Documents/devops-tools/apache-maven-3.9.1/bin/mvn install'
                          }}
-                Stages('Deployment'){
+                stages('Deployment'){
                   Steps {
 
                         sh 'cp target/Nykaa.war /home/amrita/Documents/devops-tools/apache-tomcat-9.0.73/webapps'
