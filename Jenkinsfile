@@ -9,7 +9,8 @@ pipeline {
                 stage('Build') {
                   steps {
                          sh '/home/amrita/Documents/devops-tools/apache-maven-3.9.1/bin/mvn install'
-                         }}
+                         
+                  }}
                 stages('Deployment'){
                   steps {
 
