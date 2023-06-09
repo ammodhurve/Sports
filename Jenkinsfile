@@ -2,7 +2,7 @@ pipeline {
         agent any
 
         stages {
-            stage('checkout') {
+            stage('Checkout') {
                  steps {
                          checkout scm
                        }}
@@ -13,7 +13,7 @@ pipeline {
                 stages('Deployment'){
                   Steps {
 
-                        sh 'cp target/Nykaa.war /home/amrita/Documents/devops-tools/apache-tomcat-9.0.73/webapps'
+                        sh 'cp target/Sports.war /home/amrita/Documents/devops-tools/apache-tomcat-9.0.73/webapps'
        }
 }}}
 
